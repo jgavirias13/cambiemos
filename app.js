@@ -25,7 +25,7 @@ const dbString = stage.dbHost + stage.dbName;
 mongoose.connect(dbString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: true
+    useFindAndModify: false
 });
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Db connection error: '));
